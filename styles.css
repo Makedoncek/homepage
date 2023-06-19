@@ -8,12 +8,13 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5;
 
-    --primary-text-color: #181820;
-    --secondary-text-color: #5c5c62;
-    --durability-text-color: #6a737d9c;
-    --icon-color: #6a737d;
-    --border-color: #ff9a0045;
-    --text-decoration-color: #ff9a00;
+    --primary-text-color: #fff;
+    --secondary-text-color: #e0e0e0;
+    --durability-text-color: #a8a8a8;
+    --icon-color: #a8a8a8;
+    --border-color: #4caf50;
+    --text-decoration-color: #4caf50;
+    background-color: #222;
 }
 
 .container {
@@ -22,88 +23,39 @@ body {
     max-width: 900px;
 }
 
-.fh {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.fv {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
 .resume {
     margin: 50px auto;
-    border: 1px solid #f5f5f5;
-    box-shadow: 1px 1px 7px 7px #f5f5f5;
-    padding: 30px 0;
+    border: 1px solid #444;
+    box-shadow: 1px 1px 7px 7px #444;
+    padding: 30px;
     max-width: 900px;
+    background-color: #333;
 }
 
 .resume__block {
     border-bottom: 3px solid var(--border-color);
     padding-bottom: 30px;
-    margin-bottom: 15px;
-}
-
-@media screen and (max-width: 576px) {
-
-    .main-info,
-    .contact_info_container {
-        flex-direction: column;
-    }
-
-    .contact_info_container {
-        align-items: center;
-    }
-
-    .contact-info__block:not(:last-child) {
-        margin-bottom: 20px;
-    }
-
-    .experiences {
-        margin-right: 0;
-    }
-}
-
-.contact-info__header,
-.contact-info__sub-header {
-    text-align: center;
+    margin-bottom: 30px;
 }
 
 .contact-info__header {
     color: var(--primary-text-color);
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     text-decoration-color: var(--text-decoration-color);
     text-decoration-line: underline;
 }
 
 .contact-info__sub-header {
     color: var(--secondary-text-color);
-    margin-bottom: 30px;
-}
-
-.contact-info__block {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.contact-info__block--center {
-    justify-content: center;
+    margin-bottom: 20px;
 }
 
 .contact-info__item {
     color: var(--secondary-text-color);
     text-decoration: none;
     display: flex;
-    justify-content: start;
-}
-
-.contact-info__item:not(:last-child) {
-    margin-bottom: 20px;
+    align-items: center;
+    margin-bottom: 10px;
 }
 
 .contact-info__item-icon-wrapper {
@@ -124,21 +76,15 @@ body {
 
 .contact-info__avatar {
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 200px; /* Измените размер фото здесь */
+    height: 200px; /* Измените размер фото здесь */
     object-fit: cover;
-    border: 3px solid;
-    border-color: var(--text-decoration-color);
-}
-
-.intro {
-    display: flex;
-    justify-content: start;
+    border: 3px solid var(--text-decoration-color);
 }
 
 .intro__icon-wrapper {
-    margin-right: 30px;
-    width: 30px;
+    margin-right: 15px;
+    width: 20px;
     display: flex;
     justify-content: center;
 }
@@ -163,7 +109,7 @@ body {
     margin-bottom: 15px;
 }
 
-.skills__text {
+.skills__item {
     color: var(--secondary-text-color);
     text-align: justify;
 }
@@ -182,8 +128,8 @@ body {
 .experiences__company-header-durability {
     color: var(--durability-text-color);
     text-align: left;
-    margin-bottom: 10px;
-    font-size: 15px;
+    margin-bottom: 5px;
+    font-size: 14px;
 }
 
 .experiences__company-header-name {
@@ -191,25 +137,24 @@ body {
     text-decoration-color: var(--text-decoration-color);
     text-decoration-line: underline;
     text-align: left;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .experiences__company-project {
-    margin-left: 15px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .experiences__company-project-role {
     color: var(--durability-text-color);
     text-align: left;
-    margin-bottom: 10px;
-    font-size: 15px;
+    margin-bottom: 5px;
+    font-size: 14px;
 }
 
 .experiences__company-project-name {
     color: var(--primary-text-color);
     text-align: left;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .experiences__company-project-responsibilities {
@@ -228,20 +173,20 @@ body {
 .additional-info__education-header {
     color: var(--secondary-text-color);
     text-align: left;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .additional-info__education-university-durability {
     color: var(--durability-text-color);
     text-align: left;
-    margin-bottom: 10px;
-    font-size: 15px;
+    margin-bottom: 5px;
+    font-size: 14px;
 }
 
 .additional-info__education-university-speciality {
     color: var(--primary-text-color);
     text-align: left;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .additional-info__education-university-name {
@@ -255,9 +200,24 @@ body {
 .additional-info__languages-header {
     color: var(--secondary-text-color);
     text-align: left;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .additional-info__languages-item {
     color: var(--secondary-text-color);
+}
+
+.additional-info__hobbies {
+    margin-bottom: 20px;
+}
+
+.additional-info__hobbies-header {
+    color: var(--secondary-text-color);
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.additional-info__hobbies-item {
+    color: var(--secondary-text-color);
+    text-align: justify;
 }
